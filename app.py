@@ -17,20 +17,21 @@ create_tables()
 
 
 # Page title
+import streamlit as st
+
+st.set_page_config(
+    page_title="Assessor Allocation System",
+    page_icon="📋",
+    layout="centered"
+)
 st.title("Assessor School Allocation System")
 
 st.info("""
 Welcome to the Assessor School Allocation System.
 
-This platform allows assessors to select their preferred testing date
-and available school assignment.
+Use your VVID to log in and select your testing assignment.
 
-Please note:
-- Allocations are processed on a first-confirmed basis.
-- Each assessor can only select one school per testing date.
-- Schools will no longer appear once their required assessor capacity is reached.
-
-Please confirm your selection carefully before submitting.
+Allocations are confirmed on a first-come basis.
 """)
 
 # Load data files
